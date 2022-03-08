@@ -1,0 +1,114 @@
+:root {
+	--white: #ffffff;
+	--black: #1a1c1d;
+	--red1: #ca003f;
+	--red2: #b22c38;
+	--grey1: #808080;
+	--grey2: #696969;
+	--link: #548ed5;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.header {
+	font-size: 86px;
+	margin: 0px 0px 8px 0px;
+}
+.header-link {
+	color: var(--red1);
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+
+.centre {
+	display: grid;
+	place-items: center;
+}
+
+
+.timer {
+	margin: 2% 25% 2% 25%;
+	display: grid;
+	place-items: center;
+	font-weight: lighter;
+}
+.time {
+	font-size: 116px;
+}
+
+
+.button {
+	margin: 8px 0px 8px 0px;
+	border: 0px;
+	border-radius: 8px;
+	width: 360px;
+	height: 100px;
+	font-size: 32px;
+	transition: 0.3s;
+}
+.button:hover {
+	color: var(--white);
+	cursor: pointer;
+}
+
+.set-button {
+	color: var(--white);
+	background-color: var(--red1);
+}
+.set-button:hover {
+	background-color: var(--red2);
+}
+
+.set-time-button {
+	color: var(--white);
+	background-color: var(--grey1);
+}
+.set-time-button:hover {
+	background-color: var(--grey2);
+}
+
+.reset-button {
+	color: var(--white);
+	background-color: var(--grey1);
+}
+.reset-button:hover {
+	background-color: var(--grey2);
+}
+.disabled-button {
+	margin: 8px 0px 8px 0px;
+	border: 0px;
+	border-radius: 8px;
+	width: 360px;
+	height: 100px;
+	font-size: 32px;
+	transition: 0.3s;
+	background-color: var(--grey1);
+}
+.disabled-button:hover {
+	cursor:not-allowed;
+}
+
+
+footer {
+	margin: 86px 0px 0px 0px;
+}
