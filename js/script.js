@@ -8,14 +8,14 @@ function pomoDuroNotify(COUNTER_TIME) {
     function start() {
         new Notification(header, {
         	icon: icon,
-            body: `Task with ${COUNTER_TIME} minutes started.`
+        	body: `Started ${COUNTER_TIME} minutes task.`
         });
     }
 
     function end() {
         new Notification(header, {
         	icon: icon,
-            body: `Task with ${COUNTER_TIME} minutes ended.`
+            body: `${COUNTER_TIME} minutes task ended.`
         });
     }
 
