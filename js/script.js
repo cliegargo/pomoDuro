@@ -4,26 +4,23 @@ let COUNTER_TIME = 0;
 
 function pomoDuroNotify(COUNTER_TIME) {
     const header = "New message from pomoDuro!";
+    const icon = "file:///mnt/clint/Git/pomoDuro/res/pomoDuro.png";
     function start() {
         new Notification(header, {
+        	icon: icon,
             body: `Task with ${COUNTER_TIME} minutes started.`
         });
     }
 
     function end() {
         new Notification(header, {
+        	icon: icon,
             body: `Task with ${COUNTER_TIME} minutes ended.`
         });
     }
 
-    function reset() {
-        new Notification(header, {
-            body: "Task reset."
-        });
-    }
-
     return {
-        start, end, reset
+        start, end
     };
 }
 
@@ -57,7 +54,6 @@ function pomoDuroButtons(settings, buttonID) {
 
     for(var i = 0; i < buttonIDArray.length; ++i) {
         document.getElementById(buttonIDArray[i]).disabled = settings;
-        
     }
 }
 
@@ -81,7 +77,7 @@ function pomoDuroTimer(COUNTER_TIME) {
 
         var MM = Math.floor(TIME / 60);
         var SS = TIME % 60;
-        
+
         if(MM < 10) {
             MM = `0${MM}`;
         }
@@ -92,7 +88,7 @@ function pomoDuroTimer(COUNTER_TIME) {
         document.getElementById("time").innerHTML = `${MM}:${SS}`;
         document.title = `${pomoDuro} | ${MM}:${SS}`;
         console.log(`${MM}:${SS}\t${TIME}`);
-        
+
         TIME = TIME - 1;
 
         if(TIME == 0) {
@@ -112,7 +108,7 @@ function pomoDuroClicked() {
     pomoDuroButtons(true, this.id);
 
     if(this.id == "reload-button") {
-        pomoDuroButtons(false);
+    	pomoDuroResetPage();
         window.location.reload();
         //pomoDuroTimer(COUNTER_TIME).pomoDuroEndTimer();
     } else {
