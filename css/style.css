@@ -1,5 +1,6 @@
 :root {
 	--white: #ffffff;
+	--dark: #181a1b;
 	--black: #1a1c1d;
 	--red1: #ca003f;
 	--red2: #b22c38;
@@ -15,6 +16,8 @@
 * {
 	margin: 0;
 	box-sizing: border-box;
+	color: var(--white);
+	background-color: var(--dark);
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
