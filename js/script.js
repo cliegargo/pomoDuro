@@ -4,7 +4,7 @@ let COUNTER_TIME = 0;
 
 function pomoDuroNotify(COUNTER_TIME) {
     const header = "New message from pomoDuro!";
-    const icon = "../res/pomoDuro.png";
+    const icon = "res/pomoDuro.png";
     function start() {
         new Notification(header, {
         	icon: icon,
