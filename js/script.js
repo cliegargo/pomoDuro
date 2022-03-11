@@ -86,7 +86,7 @@ function pomoDuroTimer(COUNTER_TIME) {
         }
 
         document.getElementById("time").innerHTML = `${MM}:${SS}`;
-        document.title = `${pomoDuro} | ${MM}:${SS}`;
+        document.title = `${pomoDuro} (${MM}:${SS})`;
         console.log(`${MM}:${SS}\t${TIME}`);
 
         TIME = TIME - 1;
